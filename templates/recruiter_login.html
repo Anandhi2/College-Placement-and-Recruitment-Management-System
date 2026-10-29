@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Recruiter Login</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-light">
+    <br />
+    <br />
+
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-5">
+          <div class="card shadow p-4">
+            <h2 class="text-center text-primary">🏢 Recruiter Login</h2>
+
+            <hr />
+
+            <form method="POST" action="/recruiter_login">
+              <input
+                type="email"
+                name="email"
+                class="form-control mt-3"
+                placeholder="Email"
+                required
+              />
+
+              <div class="input-group mt-3">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  class="form-control"
+                  placeholder="Password"
+                  required
+                />
+
+                <span
+                  class="input-group-text"
+                  onclick="togglePassword()"
+                  style="cursor: pointer"
+                >
+                  👁️
+                </span>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100 mt-4">
+                Login
+              </button>
+            </form>
+
+            <div class="text-center mt-3">
+              <a href="/">Back to Home</a>
+            </div>
+
+            <br />
+
+            <div class="text-center mt-2">
+              New Recruiter?
+              <a href="/recruiter_register"> Register Here </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function togglePassword() {
+        var password = document.getElementById("password");
+
+        if (password.type === "password") {
+          password.type = "text";
+        } else {
+          password.type = "password";
+        }
+      }
+    </script>
+  </body>
+</html>
